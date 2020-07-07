@@ -124,7 +124,7 @@ public struct RefreshableList<Content: View>: View {
     let action: () -> Void
     let content: () -> Content
     
-    init(data: RefreshData, action: @escaping () -> Void, @ViewBuilder content: @escaping () -> Content) {
+    public init(data: RefreshData, action: @escaping () -> Void, @ViewBuilder content: @escaping () -> Content) {
         self.data = data
         self.action = action
         self.content = content
