@@ -37,7 +37,7 @@ public class RefreshData: ObservableObject {
         }
     }
     
-    init(isDone:Binding<Bool>) {
+    public init(isDone:Binding<Bool>) {
         self._isDone = isDone
         self.showText = "Pull to refresh"
         self.showRefreshView = false
