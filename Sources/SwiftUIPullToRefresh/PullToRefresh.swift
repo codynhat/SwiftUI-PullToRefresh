@@ -33,7 +33,6 @@ public class RefreshData: ObservableObject {
                 self.showDone = false
                 self.showText = "Pull to refresh"
             }
-            print(self.isDone)
         }
     }
     
@@ -138,7 +137,6 @@ public struct RefreshableList<Content: View>: View {
              content()
             }
         }
-        .offset(y: -40)
         .onPreferenceChange(RefreshableKeyTypes.PrefKey.self) { values in
             guard let bounds = values.first?.bounds else { return }
             self.data.pullStatus = CGFloat((bounds.origin.y - 106) / 80)
